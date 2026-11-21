@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story — The VIOFE Maison</title>
+  <meta name="description" content="VIOFE brings master weavers and heritage jewellers together to make sarees and jewellery meant to be passed down." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-item active">Complimentary shipping on orders above ৳ 15,000</div>
+    <div class="announcement-item">Every piece arrives in a hand-finished keepsake box</div>
+    <div class="announcement-item">The Heirloom Edit — Autumn / Winter 2026 is here</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="max-w-7xl px-5 site-header-inner">
+      <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <button class="btn-mobile-menu" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <nav class="nav-links">
+          <a href="shop.html" class="eyebrow link-underline" style="font-size: 0.65rem;">Shop all</a>
+          <a href="shop.html?category=sarees" class="eyebrow link-underline" style="font-size: 0.65rem;">Sarees</a>
+          <a href="shop.html?category=bangles" class="eyebrow link-underline" style="font-size: 0.65rem;">Bangles</a>
+          <a href="shop.html?category=earrings" class="eyebrow link-underline" style="font-size: 0.65rem;">Earrings</a>
+          <a href="shop.html?category=necklaces" class="eyebrow link-underline" style="font-size: 0.65rem;">Necklaces</a>
+          <a href="shop.html?category=accessories" class="eyebrow link-underline" style="font-size: 0.65rem;">Accessories</a>
+        </nav>
+      </div>
+
+      <a href="index.html" class="logo" aria-label="VIOFE home">
+        <span class="logo-title">VIOFE</span>
+        <span class="logo-subtitle">Maison de Parure</span>
+      </a>
+
+      <div class="header-actions">
+        <a href="about.html" class="eyebrow link-underline" style="font-size: 0.65rem; color: var(--gold);" id="hdr-maison">Maison</a>
+        <a href="contact.html" class="eyebrow link-underline" style="font-size: 0.65rem;" id="hdr-contact">Contact</a>
+        <a href="account.html" aria-label="Wishlist" style="position: relative;">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span class="wishlist-dot" style="display: none;"></span>
+        </a>
+        <a href="account.html" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+        </a>
+        <button type="button" class="open-cart-btn" aria-label="Shopping Bag" style="position: relative;">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count-badge badge-count" style="transform: scale(0);">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="mobile-menu-backdrop"></div>
+  <aside class="drawer drawer-left" id="mobile-menu-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title" style="letter-spacing: 0.35em;">VIOFE</span>
+      <button class="drawer-close mobile-menu-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="drawer-body" style="padding: 0;">
+      <nav style="display: flex; flex-direction: column;">
+        <a href="shop.html" class="mobile-menu-close" style="border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">Shop all</a>
+        <a href="shop.html?category=sarees" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Sarees</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">01</span>
+        </a>
+        <a href="shop.html?category=bangles" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Bangles</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">02</span>
+        </a>
+        <a href="shop.html?category=earrings" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Earrings</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">03</span>
+        </a>
+        <a href="shop.html?category=necklaces" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Necklaces</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">04</span>
+        </a>
+        <a href="shop.html?category=accessories" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Accessories</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">05</span>
+        </a>
+      </nav>
+      <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border); padding: 1.5rem; font-size: 0.875rem;">
+        <a href="about.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Our Maison</a>
+        <a href="contact.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Contact</a>
+        <a href="track-order.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Track order</a>
+        <a href="account.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Account</a>
+        <a href="login.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Sign in</a>
+        <a href="admin.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Admin</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="drawer drawer-right" id="cart-drawer">
+    <div class="drawer-header" style="flex-direction: column; align-items: flex-start; gap: 0.35rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <span class="drawer-title">Your Bag</span>
+        <button class="drawer-close close-cart-btn" aria-label="Close bag">✕</button>
+      </div>
+      <p id="cart-shipping-desc" style="font-size: 0.75rem; color: var(--muted-foreground);">Nothing here yet.</p>
+      <div class="shipping-progress" style="width: 100%;">
+        <div class="shipping-progress-bar" id="cart-shipping-bar" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="drawer-body" id="cart-drawer-content"></div>
+    <div class="drawer-footer" id="cart-drawer-footer" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <span class="eyebrow" style="color: var(--muted-foreground);">Subtotal</span>
+        <span style="font-family: var(--font-display); font-size: 1.75rem; color: var(--primary);" id="cart-drawer-subtotal">৳ 0</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+        <a href="cart.html" class="btn btn-outline-luxe btn-lg" onclick="window.closeCartDrawer()">View bag</a>
+        <a href="checkout.html" class="btn btn-luxe btn-lg" onclick="window.closeCartDrawer()">Checkout</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section style="position: relative; overflow: hidden;">
+      <img
+        src="assets/editorial.jpg"
+        alt="VIOFE ivory saree editorial"
+        class="animate-ken-burns"
+        style="position: absolute; inset: 0; z-index: -10; width: 100%; height: 100%; object-fit: cover; object-position: 70% center;"
+      />
+      <div style="position: absolute; inset: 0; z-index: -5; background: linear-gradient(to right, rgba(42, 11, 18, 0.9) 0%, rgba(42, 11, 18, 0.5) 60%, transparent 100%);"></div>
+      <div class="max-w-7xl px-5" style="min-height: 75vh; display: flex; align-items: flex-end; padding-bottom: 5rem;">
+        <div style="max-width: 42rem; color: var(--primary-foreground);">
+          <p class="eyebrow text-gold-soft animate-fade-up">The Maison</p>
+          <h1 class="animate-fade-up" style="font-size: clamp(3.2rem, 7vw, 5.5rem); margin-top: 1.25rem; animation-delay: 120ms;">
+            Slow hands. <br /><em class="text-gold-gradient">Lasting things.</em>
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- BELIEF -->
+    <section class="max-w-4xl px-5 py-24 md:py-32" style="text-align: center;">
+      <div class="reveal">
+        <p class="eyebrow text-gold">Our belief</p>
+        <p style="font-family: var(--font-display); font-size: clamp(1.85rem, 4vw, 3rem); font-weight: 300; line-height: 1.35; margin-top: 2rem;">
+          VIOFE was born from a simple wish: that the most beautiful things a woman wears should also be the most
+          <em class="text-primary"> honest</em> — made slowly, by hand, by people who are proud to sign their work.
+        </p>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="bg-ivory py-24">
+      <div class="max-w-7xl px-5 grid md:grid-cols-3 gap-12">
+        <div class="reveal" style="border-top: 1px solid rgba(198, 160, 82, 0.6); padding-top: 2rem;">
+          <span style="font-family: var(--font-display); font-size: 2.5rem; color: var(--gold);">I</span>
+          <h3 style="font-size: 2rem; margin-top: 1rem;">Made by hand</h3>
+          <p class="text-muted-foreground" style="margin-top: 0.75rem; line-height: 1.7;">
+            Every saree is woven on a loom and every stone is set by a person, never a machine.
+          </p>
+        </div>
+        <div class="reveal" style="border-top: 1px solid rgba(198, 160, 82, 0.6); padding-top: 2rem; transition-delay: 120ms;">
+          <span style="font-family: var(--font-display); font-size: 2.5rem; color: var(--gold);">II</span>
+          <h3 style="font-size: 2rem; margin-top: 1rem;">Honest materials</h3>
+          <p class="text-muted-foreground" style="margin-top: 0.75rem; line-height: 1.7;">
+            Pure silk, tested zari and nickel-free metals — certified, and always disclosed.
+          </p>
+        </div>
+        <div class="reveal" style="border-top: 1px solid rgba(198, 160, 82, 0.6); padding-top: 2rem; transition-delay: 240ms;">
+          <span style="font-family: var(--font-display); font-size: 2.5rem; color: var(--gold);">III</span>
+          <h3 style="font-size: 2rem; margin-top: 1rem;">Made to be kept</h3>
+          <p class="text-muted-foreground" style="margin-top: 0.75rem; line-height: 1.7;">
+            We design for decades, not seasons, and offer lifetime care on every piece.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE & ATELIER -->
+    <section class="max-w-7xl px-5 py-24 md:py-32">
+      <div style="display: grid; gap: 3.5rem; align-items: center;" class="lg:grid-cols-2">
+        <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <img src="assets/atelier.jpg" alt="The VIOFE weaving atelier" loading="lazy" style="grid-column: 1 / -1; aspect-ratio: 16/9; width: 100%; object-fit: cover;" />
+          <img src="assets/necklace-kundan.jpg" alt="Kundan choker" loading="lazy" style="aspect-ratio: 1/1; width: 100%; object-fit: cover;" />
+          <img src="assets/bangles-enamel.jpg" alt="Enamel bangles" loading="lazy" style="aspect-ratio: 1/1; width: 100%; object-fit: cover;" />
+        </div>
+
+        <div class="reveal" style="transition-delay: 150ms;">
+          <p class="eyebrow text-gold">Our journey</p>
+          <h2 style="font-size: clamp(2.5rem, 5vw, 3.75rem); margin-top: 1rem;">From one loom to a maison</h2>
+          <ol style="list-style: none; margin-top: 3rem; display: flex; flex-direction: column; gap: 2rem;">
+            <li style="display: grid; grid-template-columns: 5rem 1fr; gap: 1.5rem;">
+              <span style="font-family: var(--font-display); font-size: 2rem; color: var(--primary);">2019</span>
+              <div style="border-left: 1px solid rgba(198, 160, 82, 0.5); padding-left: 1.5rem;">
+                <p style="font-family: var(--font-display); font-size: 1.5rem;">A single loom</p>
+                <p class="text-muted-foreground" style="font-size: 0.875rem; margin-top: 0.25rem;">VIOFE begins as one commissioned bridal saree for a friend.</p>
+              </div>
+            </li>
+            <li style="display: grid; grid-template-columns: 5rem 1fr; gap: 1.5rem;">
+              <span style="font-family: var(--font-display); font-size: 2rem; color: var(--primary);">2021</span>
+              <div style="border-left: 1px solid rgba(198, 160, 82, 0.5); padding-left: 1.5rem;">
+                <p style="font-family: var(--font-display); font-size: 1.5rem;">The jewellery atelier</p>
+                <p class="text-muted-foreground" style="font-size: 0.875rem; margin-top: 0.25rem;">We partner with a third-generation kundan family workshop.</p>
+              </div>
+            </li>
+            <li style="display: grid; grid-template-columns: 5rem 1fr; gap: 1.5rem;">
+              <span style="font-family: var(--font-display); font-size: 2rem; color: var(--primary);">2024</span>
+              <div style="border-left: 1px solid rgba(198, 160, 82, 0.5); padding-left: 1.5rem;">
+                <p style="font-family: var(--font-display); font-size: 1.5rem;">140 artisans</p>
+                <p class="text-muted-foreground" style="font-size: 0.875rem; margin-top: 0.25rem;">Our network grows across Varanasi, Kanchipuram and Dhaka.</p>
+              </div>
+            </li>
+            <li style="display: grid; grid-template-columns: 5rem 1fr; gap: 1.5rem;">
+              <span style="font-family: var(--font-display); font-size: 2rem; color: var(--primary);">2026</span>
+              <div style="border-left: 1px solid rgba(198, 160, 82, 0.5); padding-left: 1.5rem;">
+                <p style="font-family: var(--font-display); font-size: 1.5rem;">The Heirloom Edit</p>
+                <p class="text-muted-foreground" style="font-size: 0.875rem; margin-top: 0.25rem;">Our first complete collection of sarees and jewellery.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="bg-maroon-gradient grain" style="padding: 6rem 1.25rem; text-align: center; color: var(--primary-foreground);">
+      <div class="reveal max-w-2xl" style="margin-inline: auto;">
+        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem);">Find your <em class="text-gold-gradient">heirloom</em></h2>
+        <p style="margin-top: 1.25rem; color: rgba(246, 243, 236, 0.75);">
+          Begin with the pieces our clients return to again and again.
+        </p>
+        <div style="margin-top: 2.5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+          <a href="shop.html" class="btn btn-gold btn-xl">Shop the collection</a>
+          <a href="contact.html" class="btn btn-outline-cream btn-xl">Book a styling visit</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer grain">
+    <div class="max-w-7xl px-5">
+      <div class="footer-grid">
+        <div>
+          <p class="eyebrow text-gold">The VIOFE Letter</p>
+          <h3 style="font-size: 2.25rem; margin-top: 1rem; line-height: 1.2;">
+            First looks, private previews &amp; <em class="text-gold-soft">atelier stories.</em>
+          </h3>
+          <form id="footer-newsletter-form" style="margin-top: 2rem; display: flex; align-items: center; border-bottom: 1px solid rgba(246, 243, 236, 0.3); max-width: 24rem;">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required style="height: 3rem; flex: 1; background: transparent; border: none; font-size: 0.875rem; color: white; outline: none;" />
+            <button type="submit" aria-label="Subscribe" style="background: none; border: none; color: var(--gold); cursor: pointer; font-size: 1.25rem;">→</button>
+          </form>
+        </div>
+
+        <div>
+          <p class="eyebrow text-gold">Collections</p>
+          <ul style="list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+            <li><a href="shop.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Shop all</a></li>
+            <li><a href="shop.html?category=sarees" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Sarees</a></li>
+            <li><a href="shop.html?category=bangles" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Bangles</a></li>
+            <li><a href="shop.html?category=earrings" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Earrings</a></li>
+            <li><a href="shop.html?category=necklaces" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Necklaces</a></li>
+            <li><a href="shop.html?category=accessories" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow text-gold">Client care</p>
+          <ul style="list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+            <li><a href="track-order.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Track your order</a></li>
+            <li><a href="contact.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Contact the Maison</a></li>
+            <li><a href="cart.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Shopping bag</a></li>
+            <li><a href="account.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">My account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow text-gold">The Maison</p>
+          <ul style="list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+            <li><a href="about.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Our story</a></li>
+            <li><a href="login.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Sign in / Join</a></li>
+            <li><a href="admin.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Atelier admin</a></li>
+            <li style="display: flex; gap: 1rem; padding-top: 0.5rem;">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" style="color: rgba(246, 243, 236, 0.7);">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" style="color: rgba(246, 243, 236, 0.7);">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p aria-hidden="true" class="footer-giant-title text-gold-gradient">
+        VIOFE
+      </p>
+
+      <div style="margin-top: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 1rem; border-top: 1px solid rgba(246, 243, 236, 0.15); padding-top: 1.5rem; font-size: 0.75rem; color: rgba(246, 243, 236, 0.55);" class="md:flex-row">
+        <p>© 2026 VIOFE. Crafted with devotion.</p>
+        <p class="eyebrow" style="font-size: 0.55rem;">bKash · Nagad · Visa · Mastercard · Cash on delivery</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/viofe.js"></script>
+  <script>
+    if (window.VIOFE) window.VIOFE.initApp();
+  </script>
+</body>
+</html>

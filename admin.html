@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Dashboard — VIOFE Admin</title>
+  <meta name="description" content="Manage VIOFE orders, products, inventory and customers." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Admin Specific Styling */
+    .admin-wrapper {
+      display: flex;
+      min-height: 100vh;
+      background-color: var(--background);
+    }
+    .admin-sidebar {
+      position: fixed;
+      inset-block: 0;
+      left: 0;
+      z-index: 50;
+      width: 16rem;
+      background-color: var(--sidebar);
+      color: var(--sidebar-foreground);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(-100%);
+      transition: transform 0.5s var(--ease-luxe);
+    }
+    @media (min-width: 1024px) {
+      .admin-sidebar {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        transform: translateX(0);
+      }
+    }
+    .admin-sidebar.open {
+      transform: translateX(0);
+    }
+    .admin-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      color: rgba(236, 231, 220, 0.7);
+      background: none;
+      border: none;
+      font-size: 0.875rem;
+      cursor: pointer;
+      text-align: left;
+      border-radius: var(--radius);
+      transition: all 0.3s;
+    }
+    .admin-nav-item:hover, .admin-nav-item.active {
+      color: var(--sidebar-accent-foreground);
+      background-color: var(--sidebar-accent);
+    }
+    .admin-nav-item.active svg {
+      color: var(--sidebar-primary);
+    }
+    .status-select {
+      font-family: var(--font-sans);
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      border-radius: 9999px;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+      outline: none;
+    }
+    .status-Placed { border-color: rgba(198, 160, 82, 0.6); color: var(--primary); }
+    .status-Confirmed { border-color: rgba(198, 160, 82, 0.6); color: var(--primary); }
+    .status-Crafted-packed { border-color: rgba(74, 21, 32, 0.4); color: var(--primary); }
+    .status-Shipped { border-color: var(--primary); background: rgba(74, 21, 32, 0.1); color: var(--primary); }
+    .status-Out-for-delivery { border-color: var(--primary); background: var(--primary); color: var(--primary-foreground); }
+    .status-Delivered { border-color: rgba(46, 125, 50, 0.5); background: rgba(46, 125, 50, 0.1); color: var(--success); }
+  </style>
+</head>
+<body>
+
+  <div class="admin-wrapper">
+    <!-- Sidebar -->
+    <aside class="admin-sidebar grain" id="admin-sidebar">
+      <div style="position: relative; display: flex; justify-content: space-between; align-items: center; padding: 1.75rem 1.5rem;">
+        <a href="index.html" style="font-family: var(--font-display); font-size: 1.5rem; letter-spacing: 0.4em; color: var(--sidebar-foreground); text-decoration: none;">
+          VIOFE
+        </a>
+        <button id="admin-sidebar-close" style="background: none; border: none; color: inherit; cursor: pointer; display: none;" class="admin-mobile-close">✕</button>
+      </div>
+
+      <p class="eyebrow" style="position: relative; padding-inline: 1.5rem; font-size: 0.55rem; color: var(--sidebar-primary);">
+        Atelier admin
+      </p>
+
+      <nav style="position: relative; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.25rem; padding-inline: 0.75rem;">
+        <button class="admin-nav-item active" data-view="overview">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.4" fill="none"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          Overview
+        </button>
+        <button class="admin-nav-item" data-view="orders">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          Orders
+        </button>
+        <button class="admin-nav-item" data-view="products">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.4" fill="none"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          Products
+        </button>
+        <button class="admin-nav-item" data-view="customers">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Customers
+        </button>
+      </nav>
+
+      <div style="position: relative; margin-top: auto; border-top: 1px solid var(--sidebar-border); padding: 1.5rem;">
+        <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: rgba(236, 231, 220, 0.7); text-decoration: none;">
+          <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+          View storefront
+        </a>
+      </div>
+    </aside>
+
+    <div class="drawer-backdrop" id="admin-backdrop"></div>
+
+    <!-- Main Content Area -->
+    <div style="flex: 1; min-width: 0;">
+      <!-- Header -->
+      <header style="position: sticky; top: 0; z-index: 30; display: flex; height: 4rem; align-items: center; gap: 1rem; border-bottom: 1px solid var(--border); background-color: rgba(246, 243, 236, 0.9); padding: 0 1.5rem; backdrop-filter: blur(8px);">
+        <button id="admin-mobile-toggle" style="background: none; border: none; cursor: pointer; display: none;" class="admin-mobile-btn">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+
+        <div style="display: flex; flex: 1; align-items: center; gap: 0.5rem; color: var(--muted-foreground); font-size: 0.875rem;">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.4" fill="none"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" placeholder="Search orders, products, customers" style="width: 100%; background: transparent; border: none; outline: none; font-size: 0.875rem;" />
+        </div>
+
+        <div style="height: 2.25rem; width: 2.25rem; border-radius: 9999px; background-color: var(--primary); font-family: var(--font-display); color: var(--primary-foreground); display: grid; place-items: center; font-size: 1.15rem;">
+          A
+        </div>
+      </header>
+
+      <!-- Main Body -->
+      <main style="padding: 1.5rem;" class="md:p-8">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+          <div>
+            <p class="eyebrow text-gold" style="font-size: 0.6rem;">Thursday, 12 November 2026</p>
+            <h1 id="admin-view-title" style="font-size: clamp(2rem, 4vw, 3rem); margin-top: 0.5rem;">Overview</h1>
+          </div>
+          <div id="admin-action-btn-container"></div>
+        </div>
+
+        <div id="admin-view-container" class="animate-fade-up">
+          <!-- Dynamically populated view -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/viofe.js"></script>
+  <script>
+    (function () {
+      const V = window.VIOFE;
+      if (!V) return;
+
+      let adminOrders = V.getAdminOrders();
+      let statusFilter = "all";
+
+      function renderOrders() {
+        const tbody = document.getElementById("admin-orders-tbody");
+        if (!tbody) return;
+
+        let filtered = adminOrders;
+        if (statusFilter !== "all") {
+          filtered = filtered.filter((o) => o.status === statusFilter);
+        }
+
+        tbody.innerHTML = filtered.map((o) => `
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="padding: 1.25rem 1rem; font-family: var(--font-display); font-weight: 500;">
+              <a href="track-order.html?id=${o.id}" class="link-underline" style="color: var(--primary);">${o.id}</a>
+            </td>
+            <td style="padding: 1.25rem 1rem;">
+              <p style="font-weight: 500;">${o.name}</p>
+              <p style="font-size: 0.75rem; color: var(--muted-foreground);">${o.city} &middot; ${o.email}</p>
+            </td>
+            <td style="padding: 1.25rem 1rem; font-size: 0.8rem; color: var(--muted-foreground);">
+              ${o.date}
+            </td>
+            <td style="padding: 1.25rem 1rem;">
+              <p style="font-size: 0.8rem;">${o.lines.map((l) => `${l.name} (${l.qty})`).join(", ")}</p>
+            </td>
+            <td style="padding: 1.25rem 1rem; font-family: var(--font-display); font-size: 1.15rem; color: var(--primary);">
+              ${V.formatPrice(o.totals ? o.totals.total : 0)}
+            </td>
+            <td style="padding: 1.25rem 1rem;">
+              <select class="admin-status-select eyebrow" data-id="${o.id}" style="padding: 0.35rem 0.6rem; border: 1px solid var(--border); background: var(--background); font-size: 0.6rem; cursor: pointer; outline: none;">
+                ${V.ORDER_STEPS.map((s) => `
+                  <option value="${s}" ${o.status === s ? "selected" : ""}>${s}</option>
+                `).join("")}
+              </select>
+            </td>
+          </tr>
+        `).join("");
+
+        tbody.querySelectorAll(".admin-status-select").forEach((sel) => {
+          sel.onchange = () => {
+            const id = sel.getAttribute("data-id");
+            const newStatus = sel.value;
+            V.updateOrderStatus(id, newStatus);
+            adminOrders = V.getAdminOrders();
+            V.showToast("Order Updated", `${id} changed to ${newStatus}`);
+          };
+        });
+      }
+
+      // Filter tabs
+      document.querySelectorAll(".admin-filter-btn").forEach((btn) => {
+        btn.onclick = () => {
+          document.querySelectorAll(".admin-filter-btn").forEach((b) => {
+            b.style.border = "1px solid var(--border)";
+            b.style.background = "transparent";
+            b.style.color = "var(--muted-foreground)";
+          });
+          btn.style.border = "1px solid var(--primary)";
+          btn.style.background = "var(--primary)";
+          btn.style.color = "var(--primary-foreground)";
+          statusFilter = btn.getAttribute("data-status");
+          renderOrders();
+        };
+      });
+
+      renderOrders();
+    })();
+  </script>
+</body>
+</html>

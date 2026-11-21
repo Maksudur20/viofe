@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Shopping Bag — VIOFE</title>
+  <meta name="description" content="Review the sarees and jewellery in your VIOFE shopping bag." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-item active">Complimentary shipping on orders above ৳ 15,000</div>
+    <div class="announcement-item">Every piece arrives in a hand-finished keepsake box</div>
+    <div class="announcement-item">The Heirloom Edit — Autumn / Winter 2026 is here</div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="max-w-7xl px-5 site-header-inner">
+      <div style="display: flex; align-items: center; gap: 1.75rem;">
+        <button class="btn-mobile-menu" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <nav class="nav-links">
+          <a href="shop.html" class="eyebrow link-underline" style="font-size: 0.65rem;">Shop all</a>
+          <a href="shop.html?category=sarees" class="eyebrow link-underline" style="font-size: 0.65rem;">Sarees</a>
+          <a href="shop.html?category=bangles" class="eyebrow link-underline" style="font-size: 0.65rem;">Bangles</a>
+          <a href="shop.html?category=earrings" class="eyebrow link-underline" style="font-size: 0.65rem;">Earrings</a>
+          <a href="shop.html?category=necklaces" class="eyebrow link-underline" style="font-size: 0.65rem;">Necklaces</a>
+          <a href="shop.html?category=accessories" class="eyebrow link-underline" style="font-size: 0.65rem;">Accessories</a>
+        </nav>
+      </div>
+
+      <a href="index.html" class="logo" aria-label="VIOFE home">
+        <span class="logo-title">VIOFE</span>
+        <span class="logo-subtitle">Maison de Parure</span>
+      </a>
+
+      <div class="header-actions">
+        <a href="about.html" class="eyebrow link-underline" style="font-size: 0.65rem; display: none;" id="hdr-maison">Maison</a>
+        <a href="contact.html" class="eyebrow link-underline" style="font-size: 0.65rem; display: none;" id="hdr-contact">Contact</a>
+        <a href="account.html" aria-label="Wishlist" style="position: relative;">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span class="wishlist-dot" style="display: none;"></span>
+        </a>
+        <a href="account.html" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+        </a>
+        <button type="button" class="open-cart-btn" aria-label="Shopping Bag" style="position: relative;">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count-badge badge-count" style="transform: scale(0);">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="mobile-menu-backdrop"></div>
+  <aside class="drawer drawer-left" id="mobile-menu-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title" style="letter-spacing: 0.35em;">VIOFE</span>
+      <button class="drawer-close mobile-menu-close" aria-label="Close menu">✕</button>
+    </div>
+    <div class="drawer-body" style="padding: 0;">
+      <nav style="display: flex; flex-direction: column;">
+        <a href="shop.html" class="mobile-menu-close" style="border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">Shop all</a>
+        <a href="shop.html?category=sarees" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Sarees</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">01</span>
+        </a>
+        <a href="shop.html?category=bangles" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Bangles</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">02</span>
+        </a>
+        <a href="shop.html?category=earrings" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Earrings</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">03</span>
+        </a>
+        <a href="shop.html?category=necklaces" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Necklaces</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">04</span>
+        </a>
+        <a href="shop.html?category=accessories" class="mobile-menu-close" style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--border); padding: 1.25rem 1.5rem; font-family: var(--font-display); font-size: 1.85rem;">
+          <span>Accessories</span> <span class="eyebrow text-gold" style="font-size: 0.6rem;">05</span>
+        </a>
+      </nav>
+      <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid var(--border); padding: 1.5rem; font-size: 0.875rem;">
+        <a href="about.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Our Maison</a>
+        <a href="contact.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Contact</a>
+        <a href="track-order.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Track order</a>
+        <a href="account.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Account</a>
+        <a href="login.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Sign in</a>
+        <a href="admin.html" class="mobile-menu-close" style="color: var(--muted-foreground);">Admin</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cart Drawer -->
+  <div class="drawer-backdrop" id="cart-drawer-backdrop"></div>
+  <aside class="drawer drawer-right" id="cart-drawer">
+    <div class="drawer-header" style="flex-direction: column; align-items: flex-start; gap: 0.35rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <span class="drawer-title">Your Bag</span>
+        <button class="drawer-close close-cart-btn" aria-label="Close bag">✕</button>
+      </div>
+      <p id="cart-shipping-desc" style="font-size: 0.75rem; color: var(--muted-foreground);">Nothing here yet.</p>
+      <div class="shipping-progress" style="width: 100%;">
+        <div class="shipping-progress-bar" id="cart-shipping-bar" style="width: 0%;"></div>
+      </div>
+    </div>
+    <div class="drawer-body" id="cart-drawer-content"></div>
+    <div class="drawer-footer" id="cart-drawer-footer" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <span class="eyebrow" style="color: var(--muted-foreground);">Subtotal</span>
+        <span style="font-family: var(--font-display); font-size: 1.75rem; color: var(--primary);" id="cart-drawer-subtotal">৳ 0</span>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+        <a href="cart.html" class="btn btn-outline-luxe btn-lg" onclick="window.closeCartDrawer()">View bag</a>
+        <a href="checkout.html" class="btn btn-luxe btn-lg" onclick="window.closeCartDrawer()">Checkout</a>
+      </div>
+    </div>
+  </aside>
+
+  <main id="cart-page-container">
+    <!-- Populated by JavaScript -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer grain">
+    <div class="max-w-7xl px-5">
+      <div class="footer-grid">
+        <div>
+          <p class="eyebrow text-gold">The VIOFE Letter</p>
+          <h3 style="font-size: 2.25rem; margin-top: 1rem; line-height: 1.2;">
+            First looks, private previews &amp; <em class="text-gold-soft">atelier stories.</em>
+          </h3>
+          <form id="footer-newsletter-form" style="margin-top: 2rem; display: flex; align-items: center; border-bottom: 1px solid rgba(246, 243, 236, 0.3); max-width: 24rem;">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required style="height: 3rem; flex: 1; background: transparent; border: none; font-size: 0.875rem; color: white; outline: none;" />
+            <button type="submit" aria-label="Subscribe" style="background: none; border: none; color: var(--gold); cursor: pointer; font-size: 1.25rem;">→</button>
+          </form>
+        </div>
+
+        <div>
+          <p class="eyebrow text-gold">Collections</p>
+          <ul style="list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+            <li><a href="shop.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Shop all</a></li>
+            <li><a href="shop.html?category=sarees" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Sarees</a></li>
+            <li><a href="shop.html?category=bangles" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Bangles</a></li>
+            <li><a href="shop.html?category=earrings" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Earrings</a></li>
+            <li><a href="shop.html?category=necklaces" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Necklaces</a></li>
+            <li><a href="shop.html?category=accessories" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Accessories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow text-gold">Client care</p>
+          <ul style="list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+            <li><a href="track-order.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Track your order</a></li>
+            <li><a href="contact.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Contact the Maison</a></li>
+            <li><a href="cart.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Shopping bag</a></li>
+            <li><a href="account.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">My account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow text-gold">The Maison</p>
+          <ul style="list-style: none; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+            <li><a href="about.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Our story</a></li>
+            <li><a href="login.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Sign in / Join</a></li>
+            <li><a href="admin.html" class="link-underline" style="color: rgba(246, 243, 236, 0.7);">Atelier admin</a></li>
+            <li style="display: flex; gap: 1rem; padding-top: 0.5rem;">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" style="color: rgba(246, 243, 236, 0.7);">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook" style="color: rgba(246, 243, 236, 0.7);">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="1.4" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p aria-hidden="true" class="footer-giant-title text-gold-gradient">
+        VIOFE
+      </p>
+
+      <div style="margin-top: 2.5rem; display: flex; flex-direction: column; justify-content: space-between; align-items: center; gap: 1rem; border-top: 1px solid rgba(246, 243, 236, 0.15); padding-top: 1.5rem; font-size: 0.75rem; color: rgba(246, 243, 236, 0.55);" class="md:flex-row">
+        <p>© 2026 VIOFE. Crafted with devotion.</p>
+        <p class="eyebrow" style="font-size: 0.55rem;">bKash · Nagad · Visa · Mastercard · Cash on delivery</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/viofe.js"></script>
+  <script>
+    (function () {
+      const V = window.VIOFE;
+      if (!V) return;
+
+      const container = document.getElementById("cart-page-container");
+
+      function renderPage() {
+        const rawLines = V.getCart();
+        const lines = V.resolveLines(rawLines);
+        const giftWrap = V.getGiftWrap();
+        const totals = V.computeTotals(lines, { giftWrap });
+        const remaining = Math.max(0, V.FREE_SHIPPING_THRESHOLD - totals.subtotal);
+
+        if (lines.length === 0) {
+          container.innerHTML = `
+            <header class="page-header" style="text-align: center; padding: 4rem 1.25rem; border-bottom: 1px solid var(--border);">
+              <p class="eyebrow text-gold animate-fade-up">Shopping bag</p>
+              <h1 class="animate-fade-up" style="font-size: clamp(2.5rem, 5vw, 4.5rem); margin-top: 1rem;">
+                Your bag is <em class="text-primary">empty</em>
+              </h1>
+              <p class="animate-fade-up text-muted-foreground" style="margin-top: 1.25rem; max-width: 28rem; margin-inline: auto;">
+                Beautiful things are waiting. Begin with our most coveted pieces.
+              </p>
+              <div class="gold-rule animate-fade-up" style="width: 10rem; margin: 2rem auto 0;"></div>
+            </header>
+            <section class="max-w-7xl px-5 py-16">
+              <div class="featured-grid" id="cart-suggested-grid">
+                ${V.products.slice(0, 4).map((p) => V.renderProductCard(p)).join("")}
+              </div>
+            </section>
+          `;
+          V.bindCardEvents(container);
+          return;
+        }
+
+        container.innerHTML = `
+          <header class="page-header" style="text-align: center; padding: 3.5rem 1.25rem; border-bottom: 1px solid var(--border);">
+            <p class="eyebrow text-gold animate-fade-up">Shopping bag</p>
+            <h1 class="animate-fade-up" style="font-size: clamp(2.5rem, 5vw, 4.5rem); margin-top: 1rem;">
+              Your Bag
+            </h1>
+            <div class="gold-rule animate-fade-up" style="width: 10rem; margin: 2rem auto 0;"></div>
+          </header>
+
+          <section class="max-w-7xl px-5 py-14 cart-layout-grid">
+            <!-- Items Column -->
+            <div>
+              <div class="eyebrow text-muted-foreground" style="display: grid; grid-template-columns: 1fr 8rem 8rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem; font-size: 0.6rem;">
+                <span>Piece</span>
+                <span style="text-align: center;">Quantity</span>
+                <span style="text-align: right;">Total</span>
+              </div>
+
+              <ul style="list-style: none;">
+                ${lines.map((l) => {
+                  const cat = V.getCategory(l.product.category);
+                  return `
+                    <li style="display: grid; grid-template-columns: 7rem 1fr 8rem 8rem; align-items: center; gap: 1.25rem; border-bottom: 1px solid var(--border); padding: 1.75rem 0;" class="cart-row">
+                      <a href="product.html?slug=${l.slug}" style="display: block; aspect-ratio: 4/5; overflow: hidden;">
+                        <img src="${l.product.images[0]}" alt="${l.product.name}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-luxe);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='none'" />
+                      </a>
+                      <div>
+                        <p class="eyebrow text-gold" style="font-size: 0.55rem;">${cat ? cat.name : ""}</p>
+                        <a href="product.html?slug=${l.slug}" style="font-family: var(--font-display); font-size: 1.45rem; line-height: 1.2; display: block; margin-top: 0.25rem;">
+                          ${l.product.name}
+                        </a>
+                        <p style="font-size: 0.75rem; color: var(--muted-foreground); margin-top: 0.25rem;">
+                          ${l.product.option.label}: ${l.option} &middot; ${V.formatPrice(l.price)}
+                        </p>
+                        <button class="cart-item-remove eyebrow" data-slug="${l.slug}" data-option="${l.option}" style="margin-top: 0.75rem; display: inline-flex; align-items: center; gap: 0.25rem; font-size: 0.55rem; color: var(--muted-foreground); background: none; border: none; cursor: pointer;">
+                          ✕ Remove
+                        </button>
+                      </div>
+                      <div style="display: flex; justify-content: center;">
+                        <div class="qty-stepper">
+                          <button class="cart-qty-btn" data-action="dec" data-slug="${l.slug}" data-option="${l.option}">−</button>
+                          <span>${l.qty}</span>
+                          <button class="cart-qty-btn" data-action="inc" data-slug="${l.slug}" data-option="${l.option}">+</button>
+                        </div>
+                      </div>
+                      <p style="text-align: right; font-family: var(--font-display); font-size: 1.35rem; color: var(--primary);">
+                        ${V.formatPrice(l.price * l.qty)}
+                      </p>
+                    </li>
+                  `;
+                }).join("")}
+              </ul>
+
+              <a href="shop.html" class="eyebrow link-underline text-primary" style="margin-top: 1.5rem; display: inline-block; font-size: 0.6rem;">
+                Continue shopping
+              </a>
+            </div>
+
+            <!-- Summary Column -->
+            <aside class="bg-ivory shadow-soft" style="padding: 1.75rem; height: fit-content; position: sticky; top: 7rem;">
+              <h2 style="font-family: var(--font-display); font-size: 1.75rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">Order summary</h2>
+
+              <div style="margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.875rem;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span class="text-muted-foreground">Subtotal</span>
+                  <span style="font-family: var(--font-display); font-size: 1.2rem;">${V.formatPrice(totals.subtotal)}</span>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span class="text-muted-foreground">Shipping</span>
+                  <span>${totals.shipping === 0 ? '<span class="text-gold">Complimentary</span>' : V.formatPrice(totals.shipping)}</span>
+                </div>
+                ${giftWrap ? `
+                  <div style="display: flex; justify-content: space-between;">
+                    <span class="text-muted-foreground">Gift packaging</span>
+                    <span>${V.formatPrice(totals.giftWrap)}</span>
+                  </div>
+                ` : ""}
+                <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 0.5rem;">
+                  <span style="font-weight: 500;">Total</span>
+                  <span style="font-family: var(--font-display); font-size: 1.75rem; color: var(--primary);">${V.formatPrice(totals.total)}</span>
+                </div>
+              </div>
+
+              <!-- Gift wrap checkbox -->
+              <label style="margin-top: 1.5rem; display: flex; align-items: flex-start; gap: 0.75rem; border: 1px solid var(--border); padding: 1rem; cursor: pointer; background: var(--background);">
+                <input type="checkbox" id="cart-gift-wrap-check" ${giftWrap ? "checked" : ""} style="margin-top: 0.2rem;" />
+                <div>
+                  <p style="font-size: 0.825rem; font-weight: 500;">Add keepsake gift box</p>
+                  <p style="font-size: 0.725rem; color: var(--muted-foreground); margin-top: 0.15rem;">
+                    Hand-made velvet pouch, wax seal and handwritten note (+${V.formatPrice(V.GIFT_WRAP)})
+                  </p>
+                </div>
+              </label>
+
+              <a href="checkout.html" class="btn btn-luxe btn-lg" style="width: 100%; margin-top: 1.5rem;">
+                Proceed to checkout &nbsp;&rarr;
+              </a>
+
+              <div style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.725rem; color: var(--muted-foreground);">
+                <p>✓ Insured transit via dedicated courier</p>
+                <p>✓ Authenticity & purity certificate included</p>
+                <p>✓ 7-day gracious exchange window</p>
+              </div>
+            </aside>
+          </section>
+        `;
+
+        // Bind interactive events
+        container.querySelectorAll(".cart-qty-btn").forEach((btn) => {
+          btn.onclick = () => {
+            const slug = btn.getAttribute("data-slug");
+            const option = btn.getAttribute("data-option");
+            const action = btn.getAttribute("data-action");
+            const current = lines.find((l) => l.slug === slug && l.option === option);
+            if (current) {
+              const next = action === "inc" ? current.qty + 1 : current.qty - 1;
+              V.updateQty(slug, option, next);
+            }
+          };
+        });
+
+        container.querySelectorAll(".cart-item-remove").forEach((btn) => {
+          btn.onclick = () => {
+            const slug = btn.getAttribute("data-slug");
+            const option = btn.getAttribute("data-option");
+            V.removeLine(slug, option);
+          };
+        });
+
+        const chk = document.getElementById("cart-gift-wrap-check");
+        if (chk) {
+          chk.onchange = () => {
+            V.setGiftWrap(chk.checked);
+          };
+        }
+      }
+
+      V.subscribe("cart", renderPage);
+      V.subscribe("giftWrap", renderPage);
+      renderPage();
+    })();
+  </script>
+</body>
+</html>
